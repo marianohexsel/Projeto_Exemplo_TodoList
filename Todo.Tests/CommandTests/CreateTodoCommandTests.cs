@@ -8,9 +8,9 @@ namespace Todo.Tests.CommandTests
     public class CreateTodoCommandTests
     {
         private readonly CreateTodoCommand _invalidCommand = new CreateTodoCommand("", "", DateTime.Now);
-        private readonly CreateTodoCommand _validCommand = new CreateTodoCommand("Título da Tarefa", "andrebaltieri", DateTime.Now);
+        private readonly CreateTodoCommand _validCommand = ValidComand();
 
-        public CreateTodoCommand ValidComand()
+        static private CreateTodoCommand ValidComand()
         {
             var command = new CreateTodoCommand();
             command.Title = "Título da Tarefa";
